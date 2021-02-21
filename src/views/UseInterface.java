@@ -1,4 +1,4 @@
-public interface UseView {
+public interface UseInterface {
     public boolean isInUseDuringinterval();
     public assignFacilityToUse();
     public Facility vacateFacility();

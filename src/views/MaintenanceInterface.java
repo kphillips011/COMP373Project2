@@ -1,4 +1,4 @@
-public interface MaintenanceView {
+public interface MaintenanceInterface {
     public Maintenance makeFacilityMaintRequest();
     public Maintenance scheduleMaintenance();
     public int calcMaintenanceCostForFacility();
