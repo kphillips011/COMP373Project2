@@ -1,8 +1,8 @@
 import java.util.Date;
-import java.util.Time;
+import java.time.*;
 
 public class Reservation {
     Date date;
-    Time duration;
+    LocalTime duration;
     Room room;
 }

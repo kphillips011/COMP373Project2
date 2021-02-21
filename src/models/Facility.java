@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 
 public class Facility{
-    Arraylist<Building> buildings;
+    ArrayList<Building> buildings;
     String facilityName;
     int facilityID;
     String details;
 
     public void addFacilityDetails(String details){
         //adds new lines to break each set of details up, then adds new information at the bottom.
-        this.details.concat(this.details, "\n\n", details);
+        this.details.concat("\n\n" + details);
     }
 
     public getFacilityInformation(){
