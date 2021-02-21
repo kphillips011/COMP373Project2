@@ -6,7 +6,7 @@ public class Facility{
     int facilityID;
     String details;
 
-    public void addFacilityDetail(String details){
+    public void addFacilityDetails(String details){
         //adds new lines to break each set of details up, then adds new information at the bottom.
         this.details.concat(this.details, "\n\n", details);
     }
