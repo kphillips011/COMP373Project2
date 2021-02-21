@@ -11,12 +11,16 @@ public class Facility{
         this.details.concat("\n\n" + details);
     }
 
-    public getFacilityInformation(){
+    public String getFacilityInformation(){
         //returns a formatted String output of all attributes.
         ArrayList<String> buildingNames = new ArrayList<String>();
+        String output = new String(this.facilityName);
         for(Building b: this.buildings){
-            buildingNames.add(b.buildingName)
+            buildingNames.add(b.buildingName);
         }
-        return String.concat(this.facilityName, "\n\n", new String(this.facilityID),  "\n\n", buildingNames, "\n\n", this.details);
+        output.concat("\n\n" + String.valueOf(this.facilityID));
+        output.concat(buildingNames.toString());
+        output.concat(this.details);
+        return output;
     }
 }

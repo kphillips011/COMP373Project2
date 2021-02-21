@@ -5,10 +5,9 @@ public class Room {
 	boolean inUse;
 	boolean inMaintenance;
 
-	public Room Room(Building building, int capacity, int roomNumber){
-		this.roomID = String.concat(String(building.buildingID), String(roomNumber));
+	public Room(Building building, int capacity, int roomNumber){
+		this.roomID = String.valueOf(building.buildingID).concat(String.valueOf(roomNumber));
 		this.roomNumber = roomNumber;
-		this.buildingName = building.buildingName;
 		this.capacity = capacity;
 		this.inUse = false;
 		this.inMaintenance = false;
