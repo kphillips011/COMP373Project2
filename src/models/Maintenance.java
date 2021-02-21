@@ -1,4 +1,4 @@
-public class Maintenance inherits Reservation{
+public class Maintenance extends Reservation{
     String details;
     boolean completed;
 }

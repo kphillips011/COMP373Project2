@@ -1,3 +1,3 @@
-public class Use inherits Reservation{
+public class Use extends Reservation{
     
 }

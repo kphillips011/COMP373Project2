@@ -1,3 +1,3 @@
-public class Insepection inherits Reservation{
+public class Insepection extends Reservation{
     
 }
