@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Building {
     String buildingName;
-    int buildingCode;
+    int buildingID;
     String address;
     ArrayList<Room> rooms;
 }

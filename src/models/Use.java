@@ -1,5 +1,3 @@
-public class Use{
-    Date date;
-    Time duration;
-    Room room;
+public class Use inherits Reservation{
+    
 }
