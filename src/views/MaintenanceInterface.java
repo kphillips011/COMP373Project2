@@ -8,5 +8,5 @@ public interface MaintenanceInterface {
     public int calcDownTimeForFacility();
     public ArrayList<MaintenanceRequest> listMaintRequests();
     public Maintenance listMaintenance();
-    public ArrayList<Maintenance> listFacilityProblems(); //I think this should list all Maintenance objects where completed == False
+    public ArrayList<Maintenance> listFacilityProblems(); // I think this should list all Maintenance objects where completed == False
 }

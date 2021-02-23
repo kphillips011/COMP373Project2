@@ -1,3 +1,3 @@
-public class Use extends Reservation{
+public class Use extends Reservation {
     
 }

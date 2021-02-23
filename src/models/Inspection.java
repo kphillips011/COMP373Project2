@@ -1,3 +1,3 @@
-public class Inspection extends Reservation{
+public class Inspection extends Reservation {
     
 }
