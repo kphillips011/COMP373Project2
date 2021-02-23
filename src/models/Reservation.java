@@ -7,8 +7,6 @@ public class Reservation {
     Room room;
 
     public Reservation(Date date, LocalTime duration, Room room) {
-        this.date = date;
-        this.duration = duration;
-        this.room = room;
+        this.date = date; this.duration = duration; this.room = room;
     }
 }

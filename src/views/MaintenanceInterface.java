@@ -9,7 +9,7 @@ public interface MaintenanceInterface {
     public float calcProblemRateForFacility(); // based upon the whole facility - calculate ratio of not completed maintenance objects to
                                                 // completed maintenance objects
     public int calcDownTimeForFacility(); // based upon the whole facility - calculate total duration from all maintenance objects?
-    public ArrayList<MaintenanceRequest> listMaintRequests(); // list all Maintenance Requests
+    public ArrayList<MaintenanceRequest> listMaintRequests(); // list all Maintenance Requests for ALL facilities by Facility ID
     public Maintenance listMaintenance(); // list details of a specific Maintenance object
     public ArrayList<Maintenance> listFacilityProblems(); // I think this should list all Maintenance objects where completed == False
 }
