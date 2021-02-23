@@ -5,12 +5,23 @@ import java.util.Date;
 public class MaintenanceRequest {
     boolean accepted;
     String details;
+    Date date; Room room; LocalTime duration; int cost;
     Maintenance maintenance;
 
-    public Maintenance makeFacilityMaintRequest(String d, float c, Date date, LocalTime dur, Room room) {
+    public boolean makeFacilityMaintRequest(String details, int cost, LocalTime dur, Date date, Room room) {
+        this.details = details; this.date = date; this.room = room; this.duration = dur; this.cost = cost;
+        accepted = false;
+        return true;
+    }
+
+    public Maintenance scheduleMaintenance() {
+        maintenance = new Maintenance(details, cost, date, duration, room);
         accepted = true;
-        details = d;
-        maintenance = new Maintenance(d, c, date, dur, room);
+        return maintenance;
+    }
+
+    public Maintenance listMaintenance() {
+        return maintenance;
     }
 
 

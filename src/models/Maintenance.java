@@ -6,14 +6,15 @@ import java.util.Date;
 public class Maintenance extends Reservation {
     String details;
     boolean completed;
-    float cost;
+    int cost;
 
-    public Maintenance(String d, float c, Date date, LocalTime dur, Room room) {
+    public Maintenance(String details, int cost, Date date, LocalTime dur, Room room) {
         super(date, dur, room);
         completed = false;
-        details = d;
-        cost = c;
+        this.details = details;
     }
+
+    public int getMaintenanceCost() { return cost; }
 
     public boolean isCompleted() { return completed; }
 
