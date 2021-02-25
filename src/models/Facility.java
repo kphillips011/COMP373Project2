@@ -27,6 +27,7 @@ public class Facility{
     // based upon the whole facility - calculate total cost from all maintenance objects, whether completed or not
     public int calcMaintenanceCostForFacility() {
         // TODO
+
         return 0;
     }
     // based upon the whole facility - calculate ratio of not completed maintenance objects to
@@ -45,6 +46,13 @@ public class Facility{
     public ArrayList<Maintenance> listFacilityProblems() {
         // TODO
         return null;
+    }
+
+    // list all Maintenance Requests for a facility
+    public ArrayList<MaintenanceRequest> listMaintRequests() {
+        ArrayList<MaintenanceRequest> requestList = new ArrayList<MaintenanceRequest>();
+        // TODO
+        return requestList;
     }
 
 }
