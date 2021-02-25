@@ -24,5 +24,26 @@ public class Facility{
         return output;
     }
 
+    // based upon the whole facility - calculate total cost from all maintenance objects
+    public int calcMaintenanceCostForFacility() {
+        // TODO
+        return 0;
+    }
+    // based upon the whole facility - calculate ratio of not completed maintenance objects to
+    // completed maintenance objects
+    public float calcProblemRateForFacility() {
+        // TODO
+        return 0;
+    }
+    // based upon the whole facility - calculate total duration from all maintenance objects?
+    public int calcDownTimeForFacility() {
+        // TODO
+        return 0;
+    }
+    // I think this should list all Maintenance objects where completed == False
+    public ArrayList<Maintenance> listFacilityProblems() {
+        // TODO
+        return null;
+    }
 
 }
