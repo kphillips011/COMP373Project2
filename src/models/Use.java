@@ -14,15 +14,19 @@ public class Use extends Reservation {
     }
     public boolean isInUseDuringinterval() { return inUse; } //returns if facility is in use
 
-    public boolean assignFacilityToUse(Facility facility)
-    {
-    inUse = true;
-    return inUse;
+    public boolean assignFacilityToUse(Facility facility) {
+        inUse = true;
+        return inUse;
     }
 
     public float calcUsageRate() {
         // TODO
         return 0;
+    }
+    // I think this should list all Use objects where inUse == False
+    public ArrayList<Use> listActualUsage() {
+        // TODO
+        return null;
     }
 
 }
