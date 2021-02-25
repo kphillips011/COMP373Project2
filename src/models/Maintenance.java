@@ -15,13 +15,13 @@ public class Maintenance extends Reservation {
         completed = false;
     }
 
-    public int getMaintenanceCost() { return cost; }
+    public float getMaintenanceCost() { return this.cost; }
 
-    public boolean isCompleted() { return completed; }
+    public boolean isCompleted() { return this.completed; }
 
     public String toString() {
-        return "Facility + " + facility + ", Description = " + details + ", " +
-                "Date accepted = " + date + ", Duration = " + duration +
-                ", Room Number = " + room + ", Completed = " + completed;
+        return "Facility + " + this.facility + ", Description = " + this.details + ", " +
+                "Date accepted = " + this.date + ", Duration = " + this.duration +
+                ", Room Number = " + this.room + ", Completed = " + this.completed;
     }
 }
