@@ -12,7 +12,7 @@ public class Use extends Reservation {
         inUse = true;
         this.details = details;
     }
-    public boolean isInUseDuringinterval() { return inUse; }
+    public boolean isInUseDuringinterval() { return inUse; } //returns if something is in Use
 
     public boolean assignFacilityToUse(Facility facility)
     {
