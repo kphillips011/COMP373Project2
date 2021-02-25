@@ -7,4 +7,5 @@ public interface FacilityInterface  {
     public void addNewFacility();
     public void addFacilityDetail();
     public Facility removeFacility();
+    public Facility vacateFacility();
 }
