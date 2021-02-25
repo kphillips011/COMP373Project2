@@ -12,12 +12,17 @@ public class Use extends Reservation {
         inUse = true;
         this.details = details;
     }
-    public boolean isInUseDuringinterval() { return inUse; } //returns if something is in use
+    public boolean isInUseDuringinterval() { return inUse; } //returns if facility is in use
 
     public boolean assignFacilityToUse(Facility facility)
     {
     inUse = true;
     return inUse;
+    }
+
+    public float calcUsageRate() {
+        // TODO
+        return 0;
     }
 
 }
