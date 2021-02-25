@@ -7,5 +7,4 @@ public interface FacilityInterface  {
     public void addNewFacility();
     public void addFacilityDetail();
     public Facility removeFacility();
-    public Facility vacateFacility(); //Moved this from Use to Facilities because you can create a method under facilities
-}
+    public Facility vacateFacility();}
