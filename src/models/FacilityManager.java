@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class FacilityManager{
     ArrayList<Facility> facilities;
@@ -12,11 +13,14 @@ public class FacilityManager{
         return facilities;
     }
 
-    public void removeFacility(Facility facility){
-        this.facilities.remove(facility);
-    }
+    public void removeFacility(Facility facility){ this.facilities.remove(facility); }
 
-    public ArrayList<MaintenanceRequest> listMaintRequests(); // list all Maintenance Requests for ALL facilities by Facility ID
+    // list all Maintenance Requests for ALL facilities by Facility ID
+    public ArrayList<MaintenanceRequest> listMaintRequests() {
+        ArrayList<MaintenanceRequest> requestList = new ArrayList<MaintenanceRequest>();
+        // TODO
+        return requestList;
+    }
 
 
 }
