@@ -26,5 +26,4 @@ public class MaintenanceRequest {
                     ", Details = " + details + ", Room = " + room;
         } else { return "Request Information = \n" + "Accepted = true, " + maintenance.toString() ; }
     }
-
 }

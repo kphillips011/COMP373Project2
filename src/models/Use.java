@@ -7,8 +7,8 @@ public class Use extends Reservation {
     boolean inUse;
     Facility facility;
 
-    public Use(String details, Date date, LocalTime duration, Room room) {
-        super(date, duration, room);
+    public Use(String details, Date date, LocalTime duration, Room room, Facility facility) {
+        super(date, duration, room, facility);
         inUse = true;
         this.details = details;
     }
