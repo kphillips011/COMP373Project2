@@ -10,7 +10,7 @@ public class Maintenance extends Reservation {
     Facility facility;
 
     public Maintenance(Facility facility, String details, int cost, Date date, LocalTime dur, Room room) {
-        super(date, dur, room);
+        super(date, dur, room, facility);
         this.facility = facility; this.details = details; this.cost = cost;
         completed = false;
     }
