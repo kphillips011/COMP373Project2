@@ -24,18 +24,19 @@ public class Facility{
         return output;
     }
 
-    // based upon the whole facility - calculate total cost from all maintenance objects
+    // based upon the whole facility - calculate total cost from all maintenance objects, whether completed or not
     public int calcMaintenanceCostForFacility() {
         // TODO
         return 0;
     }
     // based upon the whole facility - calculate ratio of not completed maintenance objects to
-    // completed maintenance objects
+    // all maintenance objects
     public float calcProblemRateForFacility() {
         // TODO
         return 0;
     }
-    // based upon the whole facility - calculate total duration from all maintenance objects?
+    // based upon the whole facility - calculate total duration from all maintenance objects
+    // assuming 'down time' mean any time a specific facility goes under maintenance
     public int calcDownTimeForFacility() {
         // TODO
         return 0;
