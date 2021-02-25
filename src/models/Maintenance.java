@@ -6,12 +6,12 @@ import java.util.Date;
 public class Maintenance extends Reservation {
     String details;
     boolean completed;
-    int cost;
+    float cost;
     Facility facility;
 
     public Maintenance(Facility facility, String details, int cost, Date date, LocalTime dur, Room room) {
         super(date, dur, room, facility);
-        this.facility = facility; this.details = details; this.cost = cost;
+        this.facility = facility; this.details = details; this.cost = (dur.getHour() + dur.getMinute()/60) * 15;
         completed = false;
     }
 
