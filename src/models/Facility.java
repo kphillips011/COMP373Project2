@@ -4,8 +4,8 @@ public class Facility implements FacilityInterface {
     ArrayList<Building> buildings;
     ArrayList<Maintenance> acceptedMaintenance; // accepted MaintenanceRequest objects
     ArrayList<MaintenanceRequest> requestedMaintenance; // all MaintenanceRequest objects
-    String facilityName;
     int facilityID;
+    String facilityName;
     String details;
 
     @Override
@@ -43,7 +43,7 @@ public class Facility implements FacilityInterface {
 
     // based upon the whole facility - calculate total cost from all maintenance objects, whether completed or not
     @Override
-    public int calcMaintenanceCostForFacility() {
+    public double calcMaintenanceCostForFacility() {
         int facilityMaintenanceCost = 0;
         for (MaintenanceRequest mr : this.listMaintRequests()) {
             if (mr.listMaintenance() != null) {

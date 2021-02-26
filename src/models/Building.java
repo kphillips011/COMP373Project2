@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Building {
-    String buildingName;
     int buildingID;
+    String buildingName;
     String address;
     ArrayList<Room> rooms;
 }

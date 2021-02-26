@@ -5,7 +5,7 @@ public interface FacilityInterface  {
     public int requestAvailableCapacity(); // returns available capacity for a facility
     public void addFacilityDetails(String details);
     public Facility vacateFacility();
-    public int calcMaintenanceCostForFacility();
+    public double calcMaintenanceCostForFacility();
     public float calcProblemRateForFacility();
     public int calcDownTimeForFacility();
     public ArrayList<Maintenance> listFacilityProblems();

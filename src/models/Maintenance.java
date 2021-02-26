@@ -6,9 +6,9 @@ import java.util.Date;
 import sun.applet.Main;
 
 public class Maintenance implements MaintenanceInterface {
-    String details;
-    float cost;
     Facility facility;
+    String details;
+    double cost;
     LocalTime duration;
     Room room;
     Date date;
@@ -18,21 +18,21 @@ public class Maintenance implements MaintenanceInterface {
     public Maintenance() {
         this.details = "No details available";
         this.completed = false;
-        this.cost = 0;
+        this.cost = 0.00;
         this.facility = new Facility();
         this.duration = null; // TODO fix
         this.room = new Room(new Building(), 0,000);
         this.date = new Date();
     }
 
-    public Maintenance(Facility facility, String details, int cost, Date date, LocalTime dur, Room room) {
+    public Maintenance(Facility facility, String details, double cost, Date date, LocalTime dur, Room room) {
         this.facility = facility; this.details = details; this.duration = duration; this.room = room; this.date = date;
         this.cost = (duration.getHour() + duration.getMinute()/60) * 15;
         this.completed = false;
     }
 
     @Override
-    public float getMaintenanceCost() { return this.cost; }
+    public double getMaintenanceCost() { return this.cost; }
 
     @Override
     public boolean isCompleted() { return this.completed; }
@@ -56,5 +56,7 @@ public class Maintenance implements MaintenanceInterface {
         public void passInspection() { this.passed = true; }
 
         public void failInspection() { this.passed = false;}
+
+        public boolean passed() { return this.passed; }
     }
 }

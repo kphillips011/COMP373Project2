@@ -3,9 +3,10 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Use implements UseInterface {
+    Facility facility;
     String details;
+    Date date; LocalTime duration; Room room;
     boolean inUse = false;
-    Facility facility; Date date; LocalTime duration; Room room;
 
     public Use(String details, Date date, LocalTime duration, Room room, Facility facility) {
         //super(date, duration, room, facility);

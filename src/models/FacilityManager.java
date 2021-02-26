@@ -23,5 +23,5 @@ public class FacilityManager {
 
     // TODO -- is this the right place
     // I think this should list all Maintenance objects where completed == False
-    public ArrayList<Maintenance> listFacilityProblems() { return new ArrayList<Maintenance>(); }
+    public ArrayList<Maintenance> listAllFacilityProblems() { return new ArrayList<Maintenance>(); }
 }
