@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 public class Facility implements FacilityInterface {
     ArrayList<Building> buildings;
+    ArrayList<Maintenance> acceptedMaintenance; // accepted MaintenanceRequest objects
+    ArrayList<MaintenanceRequest> requestedMaintenance; // all MaintenanceRequest objects
     String facilityName;
     int facilityID;
     String details;
@@ -62,7 +64,6 @@ public class Facility implements FacilityInterface {
         for (MaintenanceRequest mr : this.listMaintRequests()) {
 
         }
-
         return 0;
     }
 
