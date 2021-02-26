@@ -46,10 +46,13 @@ public class Facility implements FacilityInterface {
         return capacity;
     }
 
+    // Clears all maintenance, usage, and inspections for this facility
     @Override
-    public Facility vacateFacility() {
-        // TODO
-        return this;
+    public boolean vacateFacility() {
+        this.requestedMaintenance.clear();
+        this.actualUsage.clear();
+        this.inspections.clear();
+        return true;
     }
 
     // Calculate total cost from all maintenance objects, whether completed or not
