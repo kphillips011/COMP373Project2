@@ -4,6 +4,8 @@ public class Facility implements FacilityInterface {
     ArrayList<Building> buildings;
     ArrayList<Maintenance> acceptedMaintenance; // accepted MaintenanceRequest objects
     ArrayList<MaintenanceRequest> requestedMaintenance; // all MaintenanceRequest objects
+    ArrayList<Use> actualUsage; // all use objects
+    ArrayList<Maintenance.Inspection> inspections; // all inspection objects
     int facilityID;
     String facilityName;
     String details;
