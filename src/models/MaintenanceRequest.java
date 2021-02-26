@@ -2,7 +2,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class MaintenanceRequest extends Maintenance{
+public class MaintenanceRequest extends Maintenance {
     boolean accepted = false;
     Facility facility; String details; Room room;
     Maintenance maintenance;
