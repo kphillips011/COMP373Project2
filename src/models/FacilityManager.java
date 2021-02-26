@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class FacilityManager{
+public class FacilityManager {
     ArrayList<Facility> facilities;
 
-    public ArrayList<Facility> getFacilities(){
+    public ArrayList<Facility> listFacilities(){
         return this.facilities;
-    }
+    } // changed from getFacilities() to listFacilities()
 
     public ArrayList<Facility> addNewFacility(Facility newFacility){
         this.facilities.add(newFacility);
@@ -15,4 +15,13 @@ public class FacilityManager{
 
     public void removeFacility(Facility facility){ this.facilities.remove(facility); }
 
+    // TODO -- is this the right place
+    public ArrayList<Use> listActualUsage() { return new ArrayList<Use>(); } // Lists all uses of rooms/facilities/buildings etc.
+
+    // TODO -- is this the right place
+    public ArrayList<Inspection> listInspections() { return new ArrayList<Inspection>(); } // Lists all information about inspection
+
+    // TODO -- is this the right place
+    // I think this should list all Maintenance objects where completed == False
+    public ArrayList<Maintenance> listFacilityProblems() { return new ArrayList<Maintenance>(); }
 }

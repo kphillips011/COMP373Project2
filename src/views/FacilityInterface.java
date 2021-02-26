@@ -1,10 +1,8 @@
 import java.util.ArrayList;
 
 public interface FacilityInterface  {
-    public ArrayList<Facility> listFacilities();
-    public String getFacilityInformation();
-    public int requestAvailableCapacity();
-    public void addNewFacility();
-    public void addFacilityDetail();
-    public Facility removeFacility();
-    public Facility vacateFacility();}
+    public String getFacilityInformation(); // returns details for a facility
+    public int requestAvailableCapacity(); // returns available capacity for a facility
+    public void addFacilityDetails(String details);
+    public Facility vacateFacility();
+}

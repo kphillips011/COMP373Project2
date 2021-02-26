@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Facility{
+public class Facility implements FacilityInterface {
     ArrayList<Building> buildings;
     String facilityName;
     int facilityID;
@@ -22,6 +22,17 @@ public class Facility{
         output.concat(buildingNames.toString());
         output.concat(this.details);
         return output;
+    }
+
+    // returns available capacity for a facility
+    public int requestAvailableCapacity() {
+        //TODO
+        return 0;
+    }
+
+    public Facility vacateFacility() {
+        // TODO
+        return this;
     }
 
     // based upon the whole facility - calculate total cost from all maintenance objects, whether completed or not

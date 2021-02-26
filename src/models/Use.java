@@ -2,7 +2,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Use extends Reservation {
+public class Use implements UseInterface {
     String details;
     boolean inUse;
     Facility facility;
