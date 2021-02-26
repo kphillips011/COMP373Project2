@@ -7,12 +7,12 @@ import sun.applet.Main;
 
 public class Maintenance implements MaintenanceInterface {
     String details;
-    boolean completed;
     float cost;
     Facility facility;
     LocalTime duration;
     Room room;
     Date date;
+    boolean completed;
 
     // default constructor
     public Maintenance() {
@@ -20,7 +20,7 @@ public class Maintenance implements MaintenanceInterface {
         this.completed = false;
         this.cost = 0;
         this.facility = new Facility();
-        this.duration = new LocalTime("0:00:00"); // TODO fix
+        this.duration = null; // TODO fix
         this.room = new Room(new Building(), 0,000);
         this.date = new Date();
     }
@@ -31,15 +31,30 @@ public class Maintenance implements MaintenanceInterface {
         this.completed = false;
     }
 
+    @Override
     public float getMaintenanceCost() { return this.cost; }
 
+    @Override
     public boolean isCompleted() { return this.completed; }
 
+    @Override
     public String toString() {
         return "Facility + " + this.facility + ", Description = " + this.details + ", " +
                 "Date accepted = " + this.date + ", Duration = " + this.duration +
                 ", Room Number = " + this.room + ", Completed = " + this.completed;
     }
 
+    @Override
     public Maintenance listMaintenance() { return this; }
+
+    // make Inspection into inner class
+    public class Inspection {
+        boolean passed;
+
+        public Inspection() { this.passed = true; }
+
+        public void passInspection() { this.passed = true; }
+
+        public void failInspection() { this.passed = false;}
+    }
 }

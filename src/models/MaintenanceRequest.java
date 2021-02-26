@@ -4,26 +4,21 @@ import java.util.Date;
 
 public class MaintenanceRequest extends Maintenance {
     boolean accepted = false;
-    Facility facility; String details; Room room;
-    Maintenance maintenance;
 
-    public boolean makeFacilityMaintRequest(Facility facility, String details, Room room) {
-        this.facility = facility; this.details = details; this.room = room;
-        return true;
+    public MaintenanceRequest(Facility facility, String details, int cost, Date date, LocalTime dur, Room room) {
+        super(facility, details, cost, date, dur, room);
     }
 
-    public Maintenance scheduleMaintenance(Date date, LocalTime dur, int cost) {
-        maintenance = new Maintenance(facility, details, cost, date, dur, room);
+    public Maintenance scheduleMaintenance() {
         accepted = true;
-        return maintenance;
+        return this;
     }
 
-    public Maintenance listMaintenance() { return maintenance; }
-
+    @Override
     public String toString() {
         if (accepted == false) {
             return "Request Information = \n" + "Accepted = false" + ", Facility = " + facility +
                     ", Details = " + details + ", Room = " + room;
-        } else { return "Request Information = \n" + "Accepted = true, " + maintenance.toString() ; }
+        } else { return "Request Information = \n" + "Accepted = true, " + super.toString() ; }
     }
 }
