@@ -14,7 +14,7 @@ public class Room {
 	}
 
 	public int requestAvailableCapacity(){
-		//get capacity attribute that was defined on construction of the object.
+		// get capacity attribute that was defined on construction of the object.
 		return this.capacity;
 	}
 }

@@ -1,8 +1,12 @@
+import java.lang.reflect.Array;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Date;
+
+import sun.applet.Main;
 
 public class Facility implements FacilityInterface {
     ArrayList<Building> buildings;
-    ArrayList<Maintenance> acceptedMaintenance; // accepted MaintenanceRequest objects
     ArrayList<MaintenanceRequest> requestedMaintenance; // all MaintenanceRequest objects
     ArrayList<Use> actualUsage; // all use objects
     ArrayList<Maintenance.Inspection> inspections; // all inspection objects
@@ -30,11 +34,16 @@ public class Facility implements FacilityInterface {
         return output;
     }
 
-    // returns available capacity for a facility
+    // Returns total available capacity for this facility
     @Override
     public int requestAvailableCapacity() {
-        //TODO
-        return 0;
+        int capacity = 0;
+        for (Building b : buildings) {
+            for (Room r: b.rooms) {
+                capacity += r.requestAvailableCapacity();
+            }
+        }
+        return capacity;
     }
 
     @Override
@@ -43,7 +52,7 @@ public class Facility implements FacilityInterface {
         return this;
     }
 
-    // based upon the whole facility - calculate total cost from all maintenance objects, whether completed or not
+    // Calculate total cost from all maintenance objects, whether completed or not
     @Override
     public double calcMaintenanceCostForFacility() {
         int facilityMaintenanceCost = 0;
@@ -57,46 +66,46 @@ public class Facility implements FacilityInterface {
     }
 
 
-    // based upon the whole facility - calculate ratio of not completed maintenance objects to
-    // all maintenance objects
+    // Calculate ratio of not completed maintenance objects to all maintenance objects
     @Override
     public float calcProblemRateForFacility() {
-        // TODO
-        float incomplete = 0; float total = 0;
-        for (MaintenanceRequest mr : this.listMaintRequests()) {
-
-        }
-        return 0;
+        float incomplete = this.listFacilityProblems().size();
+        float total = this.listMaintRequests().size();
+        return incomplete / total;
     }
 
-    // based upon the whole facility - calculate total duration from all maintenance objects
+    // Calculate total duration from all maintenance objects
     // assuming 'down time' mean any time a specific facility goes under maintenance
     @Override
     public int calcDownTimeForFacility() {
-        // TODO
-        return 0;
+        int downTime = 0;
+        for (MaintenanceRequest mr : this.listMaintRequests()) {
+            downTime += -1; // TODO add up durations
+        }
+        return downTime;
     }
 
-    // I think this should list all Maintenance objects where completed == False
+    // List all Maintenance objects where completed == false
     @Override
     public ArrayList<Maintenance> listFacilityProblems() {
-        // TODO
-        return null;
+        ArrayList<Maintenance> problems = new ArrayList<Maintenance>();
+        for (MaintenanceRequest mr : this.listMaintRequests()) {
+            if (!(mr.isCompleted())) { problems.add(mr.listMaintenance()); }
+        }
+        return problems;
     }
 
-    // creates MaintenanceRequest object for this facility
+    // Creates MaintenanceRequest object for this facility
     @Override
-    public boolean makeFacilityMaintRequest() {
-        // TODO
+    public boolean makeFacilityMaintRequest(String details, double cost, Date date, LocalTime dur, Room room) {
+        requestedMaintenance.add(new MaintenanceRequest(this, details, cost, date, dur, room));
         return true;
     }
 
-    // list all Maintenance Requests for a facility
+    // List all Maintenance Requests for this facility
     @Override
     public ArrayList<MaintenanceRequest> listMaintRequests() {
-        ArrayList<MaintenanceRequest> requestList = new ArrayList<MaintenanceRequest>();
-        // TODO
-        return requestList;
+        return this.requestedMaintenance;
     }
 
 }
