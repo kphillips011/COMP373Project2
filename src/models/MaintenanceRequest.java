@@ -2,7 +2,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class MaintenanceRequest {
+public class MaintenanceRequest extends Maintenance{
     boolean accepted = false;
     Facility facility; String details; Room room;
     Maintenance maintenance;
@@ -18,7 +18,7 @@ public class MaintenanceRequest {
         return maintenance;
     }
 
-    public Maintenance listMaintenance() { return maintenance; } // TODO is this the best idea?
+    public Maintenance listMaintenance() { return maintenance; }
 
     public String toString() {
         if (accepted == false) {

@@ -26,14 +26,24 @@ public class Facility{
 
     // based upon the whole facility - calculate total cost from all maintenance objects, whether completed or not
     public int calcMaintenanceCostForFacility() {
-        // TODO
-
-        return 0;
+        int facilityMaintenanceCost = 0;
+        for (MaintenanceRequest mr : this.listMaintRequests()) {
+            if (mr.listMaintenance() != null) {
+                Maintenance m = mr.listMaintenance();
+                facilityMaintenanceCost += m.getMaintenanceCost();
+            }
+        }
+        return facilityMaintenanceCost;
     }
     // based upon the whole facility - calculate ratio of not completed maintenance objects to
     // all maintenance objects
     public float calcProblemRateForFacility() {
         // TODO
+        float incomplete = 0; float total = 0;
+        for (MaintenanceRequest mr : this.listMaintRequests()) {
+
+        }
+
         return 0;
     }
     // based upon the whole facility - calculate total duration from all maintenance objects
