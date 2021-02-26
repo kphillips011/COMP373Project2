@@ -80,7 +80,7 @@ public class Facility implements FacilityInterface {
     public int calcDownTimeForFacility() {
         int downTime = 0;
         for (MaintenanceRequest mr : this.listMaintRequests()) {
-            downTime += -1; // TODO add up durations
+            downTime += -1; // TODO add up durations after fix in Maintenance.java
         }
         return downTime;
     }
