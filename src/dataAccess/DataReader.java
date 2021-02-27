@@ -6,7 +6,8 @@ import models.*;
 public class DataReader {
 
 
-    public static void main(String[] args){
+    public HashMap<String,Object> read(String[] args){
+        HashMap<String,Object> output;
         BufferedReader csvRead;
         try {
             csvRead = new BufferedReader( new FileReader(new File("dataFile.csv")));
@@ -25,6 +26,7 @@ public class DataReader {
                     //Create Facility
                     params = csvRead.readLine().split(",");
                     Facility facility = new Facility(Integer.valueOf(params[0]), params[1], params[2]);
+                    output.put("Facility", facility)
                     if(csvRead.readLine().split(",")[0].equals("")){
                         break;
                     }
@@ -33,6 +35,7 @@ public class DataReader {
                     params = csvRead.readLine().split(",");
                     Building building = new Building(Integer.valueOf(params[0]), params[1], params[2]);
                     facility.buildings.add(building);
+                    output.put("Building", building)
                     if(csvRead.readLine().split(",")[0].equals("")){
                         break;
                     }
@@ -41,6 +44,7 @@ public class DataReader {
                     params = csvRead.readLine().split(",");
                     Room room = new Room(params[0], Integer.valueOf(params[2]), Integer.valueOf(params[1]));
                     building.rooms.add(room);
+                    output.put("Room", room)
                     if(csvRead.readLine().split(",")[0].equals("")){
                         break;
                     }
@@ -51,6 +55,7 @@ public class DataReader {
                     date = new Date(Integer.valueOf(datestr[2]), Integer.valueOf(datestr[1]), Integer.valueOf(datestr[0]));
                     MaintenanceRequest mr = new MaintenanceRequest(facility, params[0], Integer.valueOf(params[1]), date, Integer.valueOf(params[3]), room);
                     facility.requestedMaintenance.add(mr);
+                    output.put("MaintenanceRequest", mr)
                     if(csvRead.readLine().split(",")[0].equals("")){
                         break;
                     }
@@ -61,10 +66,12 @@ public class DataReader {
                     date = new Date(Integer.valueOf(datestr[2]), Integer.valueOf(datestr[1]), Integer.valueOf(datestr[0]));
                     Use use = new Use(params[0], date, params[1], room, facility);
                     facility.actualUse.add(mr);
+                    output.put("Use", use);
                     if(csvRead.readLine().split(",")[0].equals("")){
                         break;
                     }
             }
         }
+        return output;
     }
 }
