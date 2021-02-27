@@ -6,4 +6,4 @@ Contributors: Kendall Phillips, Gaudwin Timoteo, Trey Roche
 UML Diagram of Domain Model: https://drive.google.com/file/d/1Zm1sBM2HghQoju3NC0F6oRXxVnQqejAE/view?usp=sharing
 
 Notes:
-1. Assume that someone must make a MaintenanceRequest object in order to create a Maintenance object.
+1. Assume that someone must make a MaintenanceRequest object in order for a Maintenance object to be created.
