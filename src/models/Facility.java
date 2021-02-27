@@ -15,12 +15,6 @@ public class Facility implements FacilityInterface {
     String details;
 
     @Override
-    public void addFacilityDetails(String details){
-        //adds new lines to break each set of details up, then adds new information at the bottom.
-        this.details.concat("\n\n" + details);
-    }
-
-    @Override
     public String getFacilityInformation(){
         //returns a formatted String output of all attributes.
         ArrayList<String> buildingNames = new ArrayList<String>();
@@ -44,6 +38,12 @@ public class Facility implements FacilityInterface {
             }
         }
         return capacity;
+    }
+
+    @Override
+    public void addFacilityDetails(String details){
+        //adds new lines to break each set of details up, then adds new information at the bottom.
+        this.details.concat("\n\n" + details);
     }
 
     // Clears all maintenance, usage, and inspections for this facility
