@@ -8,7 +8,7 @@ public class Maintenance implements MaintenanceInterface {
     Facility facility;
     String details;
     double cost;
-    double duration; //will be measured in terms of hours
+    double duration; //will be measured in units of hours
     Room room;
     Date date;
     boolean completed;
