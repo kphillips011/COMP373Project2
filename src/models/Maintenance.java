@@ -1,5 +1,4 @@
 import java.rmi.server.RemoteServer;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -9,7 +8,7 @@ public class Maintenance implements MaintenanceInterface {
     Facility facility;
     String details;
     double cost;
-    LocalTime duration;
+    double duration; //will be measured in terms of hours
     Room room;
     Date date;
     boolean completed;
@@ -20,14 +19,14 @@ public class Maintenance implements MaintenanceInterface {
         this.completed = false;
         this.cost = 0.00;
         this.facility = new Facility();
-        this.duration = LocalTime.MIN;
+        this.duration = 0;
         this.room = new Room(new Building(), 0,000);
         this.date = new Date();
     }
 
-    public Maintenance(Facility facility, String details, double cost, Date date, LocalTime dur, Room room) {
-        this.facility = facility; this.details = details; this.duration = duration; this.room = room; this.date = date;
-        this.cost = (duration.getHour() + duration.getMinute()/60) * 15;
+    public Maintenance(Facility facility, String details, double cost, Date date, double dur, Room room) {
+        this.facility = facility; this.details = details; this.duration = dur; this.room = room; this.date = date;
+        this.cost = dur * 15.0;
         this.completed = false;
     }
 
