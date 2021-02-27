@@ -20,7 +20,7 @@ public class Maintenance implements MaintenanceInterface {
         this.completed = false;
         this.cost = 0.00;
         this.facility = new Facility();
-        this.duration = null; // TODO fix
+        this.duration = LocalTime.MIN;
         this.room = new Room(new Building(), 0,000);
         this.date = new Date();
     }
