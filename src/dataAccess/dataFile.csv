@@ -16,4 +16,4 @@ roomID,roomNumber,capacity,inUse,inMaintenance,,,
 ,,,,,,,
 Maintenance,,,,,,,
 date,duration,room,facility,details,completed,cost,Facility
-01-01-2021,1:30,,,"""Leaky faucet""",FALSE,22.5,
+01-01-2021,1.5,,,"""Leaky faucet""",FALSE,22.5,

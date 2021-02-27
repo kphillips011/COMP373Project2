@@ -1,3 +1,5 @@
+package models;
+
 import java.lang.reflect.Array;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -13,6 +15,16 @@ public class Facility implements FacilityInterface {
     int facilityID;
     String facilityName;
     String details;
+
+    public Facility(int facilityID, String facilityName, String details) {
+        this.facilityID = facilityID;
+        this.facilityName = facilityName;
+        this.details = details;
+        this.buildings = new ArrayList<Building>();
+        this.requestedMaintenance = new ArrayList<MaintenanceRequest>();
+        this.actualUsage = new ArrayList<Use>();
+        this.inspections = new ArrayList<Maintenance.Inspection>();
+    }
 
     @Override
     public String getFacilityInformation(){

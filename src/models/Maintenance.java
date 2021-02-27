@@ -1,3 +1,5 @@
+package models;
+
 import java.rmi.server.RemoteServer;
 import java.util.ArrayList;
 import java.util.Date;

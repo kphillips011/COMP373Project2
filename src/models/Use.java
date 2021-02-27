@@ -1,18 +1,24 @@
-import java.time.LocalTime;
+package models; 
+
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Use implements UseInterface {
     Facility facility;
     String details;
-    Date date; LocalTime duration; Room room;
+    Date date; 
+    double duration; 
+    Room room;
     boolean inUse = false;
 
-    public Use(String details, Date date, LocalTime duration, Room room, Facility facility) {
+    public Use(String details, Date date, double duration, Room room, Facility facility) {
         //super(date, duration, room, facility);
         inUse = true;
         this.details = details;
-        this.facility = facility; this.date = date; this.duration = duration; this.room = room;
+        this.facility = facility; 
+        this.date = date; 
+        this.duration = duration; 
+        this.room = room;
     }
 
     @Override

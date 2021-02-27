@@ -1,11 +1,12 @@
-import java.time.LocalTime;
+package models;
+
 import java.util.ArrayList;
 import java.util.Date;
 
 public class MaintenanceRequest extends Maintenance {
     boolean accepted = false;
 
-    public MaintenanceRequest(Facility facility, String details, double cost, Date date, LocalTime dur, Room room) {
+    public MaintenanceRequest(Facility facility, String details, double cost, Date date, double dur, Room room) {
         super(facility, details, cost, date, dur, room);
     }
 
