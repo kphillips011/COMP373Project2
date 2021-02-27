@@ -12,9 +12,4 @@ public class Room {
 		this.inUse = false;
 		this.inMaintenance = false;
 	}
-
-	public int requestAvailableCapacity(){
-		// get capacity attribute that was defined on construction of the object.
-		return this.capacity;
-	}
 }
