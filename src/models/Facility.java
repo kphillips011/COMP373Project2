@@ -1,9 +1,9 @@
+package models;
+
 import java.lang.reflect.Array;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
-
-import sun.applet.Main;
 
 public class Facility implements FacilityInterface {
     ArrayList<Building> buildings;
@@ -14,10 +14,14 @@ public class Facility implements FacilityInterface {
     String facilityName;
     String details;
 
-    @Override
-    public void addFacilityDetails(String details){
-        //adds new lines to break each set of details up, then adds new information at the bottom.
-        this.details.concat("\n\n" + details);
+    public Facility(int facilityID, String facilityName, String details) {
+        this.facilityID = facilityID;
+        this.facilityName = facilityName;
+        this.details = details;
+        this.buildings = new ArrayList<Building>();
+        this.requestedMaintenance = new ArrayList<MaintenanceRequest>();
+        this.actualUsage = new ArrayList<Use>();
+        this.inspections = new ArrayList<Maintenance.Inspection>();
     }
 
     @Override
@@ -40,10 +44,16 @@ public class Facility implements FacilityInterface {
         int capacity = 0;
         for (Building b : buildings) {
             for (Room r: b.rooms) {
-                capacity += r.requestAvailableCapacity();
+                capacity += r.capacity;
             }
         }
         return capacity;
+    }
+
+    @Override
+    public void addFacilityDetails(String details){
+        //adds new lines to break each set of details up, then adds new information at the bottom.
+        this.details.concat("\n\n" + details);
     }
 
     // Clears all maintenance, usage, and inspections for this facility
@@ -83,7 +93,7 @@ public class Facility implements FacilityInterface {
     public int calcDownTimeForFacility() {
         int downTime = 0;
         for (MaintenanceRequest mr : this.listMaintRequests()) {
-            downTime += -1; // TODO add up durations
+            downTime += mr.duration;
         }
         return downTime;
     }
