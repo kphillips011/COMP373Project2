@@ -20,7 +20,7 @@ public class Maintenance implements MaintenanceInterface {
         this.cost = 0.00;
         this.facility = new Facility();
         this.duration = 0;
-        this.room = new Room(new Building(), 0,000);
+        this.room = new Room(new Building(0, "Building 0", "0000 Default Street", new ArrayList<Room>()), 0,000);
         this.date = new Date();
     }
 

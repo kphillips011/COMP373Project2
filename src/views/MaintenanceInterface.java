@@ -5,4 +5,6 @@ public interface MaintenanceInterface {
     public double getMaintenanceCost(); // returns cost associated with maintenance object
     public boolean isCompleted(); // returns whether the maintenance is completed
     public String toString();
+
+
 }

@@ -26,5 +26,4 @@ public class testRoom {
     public void testRequestAvailableCapacity(){
         AssertEquals(35, room.requestAvailableCapacity());
     }
-
 }
