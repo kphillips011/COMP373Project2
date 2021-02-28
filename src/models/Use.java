@@ -1,5 +1,3 @@
-package models; 
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -35,7 +33,7 @@ public class Use implements UseInterface {
     public float calcUsageRate() {
         // calculates the proportion of when a facility is in use to when it is open
         // assumes a facility is open 8 hours a day (9-5)
-        double totalDuration;
+        double totalDuration = 0;
         ArrayList<Use> uses = this.facility.actualUsage;
         for (Use u: uses){
             totalDuration += u.duration;

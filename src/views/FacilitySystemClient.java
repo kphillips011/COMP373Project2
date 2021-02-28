@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 import models.*;
 import dataaccess.DataReader;
 

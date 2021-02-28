@@ -1,7 +1,3 @@
-package models;
-
-import java.rmi.server.RemoteServer;
-import java.util.ArrayList;
 import java.util.Date;
 
 public class Maintenance implements MaintenanceInterface {
@@ -18,9 +14,9 @@ public class Maintenance implements MaintenanceInterface {
         this.details = "No details available";
         this.completed = false;
         this.cost = 0.00;
-        this.facility = new Facility();
+        this.facility = new Facility(0, "Facility 0", "Default details");
         this.duration = 0;
-        this.room = new Room(new Building(0, "Building 0", "0000 Default Street", new ArrayList<Room>()), 0,000);
+        this.room = new Room(new Building(0, "Building 0", "0000 Default Street"), 0,000);
         this.date = new Date();
     }
 

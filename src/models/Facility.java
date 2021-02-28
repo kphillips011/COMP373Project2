@@ -1,6 +1,3 @@
-package models;
-
-import java.lang.reflect.Array;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
@@ -110,7 +107,7 @@ public class Facility implements FacilityInterface {
 
     // Creates MaintenanceRequest object for this facility
     @Override
-    public boolean makeFacilityMaintRequest(String details, double cost, Date date, LocalTime dur, Room room) {
+    public boolean makeFacilityMaintRequest(String details, double cost, Date date, double dur, Room room) {
         requestedMaintenance.add(new MaintenanceRequest(this, details, cost, date, dur, room));
         return true;
     }
