@@ -5,8 +5,6 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 
-import sun.applet.Main;
-
 public class Facility implements FacilityInterface {
     ArrayList<Building> buildings;
     ArrayList<MaintenanceRequest> requestedMaintenance; // all MaintenanceRequest objects
