@@ -33,8 +33,15 @@ public class Use implements UseInterface {
 
     @Override
     public float calcUsageRate() {
-        // TODO
-        return 0;
+        // calculates the proportion of when a facility is in use to when it is open
+        // assumes a facility is open 8 hours a day (9-5)
+        double totalDuration;
+        ArrayList<Use> uses = this.facility.actualUsage;
+        for (Use u: uses){
+            totalDuration += u.duration;
+        }
+        double rate = totalDuration/(8.0*uses.size());
+        return (float)rate;
     }
 
 }
