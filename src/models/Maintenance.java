@@ -4,8 +4,6 @@ import java.rmi.server.RemoteServer;
 import java.util.ArrayList;
 import java.util.Date;
 
-import sun.applet.Main;
-
 public class Maintenance implements MaintenanceInterface {
     Facility facility;
     String details;
