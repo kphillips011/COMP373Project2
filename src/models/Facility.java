@@ -44,7 +44,7 @@ public class Facility implements FacilityInterface {
         int capacity = 0;
         for (Building b : buildings) {
             for (Room r: b.rooms) {
-                capacity += r.requestAvailableCapacity();
+                capacity += r.capacity;
             }
         }
         return capacity;

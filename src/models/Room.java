@@ -14,8 +14,4 @@ public class Room {
 		this.inUse = false;
 		this.inMaintenance = false;
 	}
-
-	public int requestAvailableCapacity(){
-		return this.capacity;
-	}
 }
