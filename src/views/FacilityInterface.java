@@ -2,6 +2,7 @@
 
 import java.util.ArrayList;
 import java.util.Date;
+import models.*;
 
 public interface FacilityInterface  {
     public String getFacilityInformation(); // returns details for a facility
