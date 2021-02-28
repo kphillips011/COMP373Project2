@@ -1,7 +1,8 @@
-package dataaccess;
+package dataAccess;
 
 import java.util.Date;
 import java.io.*;
+import java.util.HashMap;
 
 public class DataReader {
 

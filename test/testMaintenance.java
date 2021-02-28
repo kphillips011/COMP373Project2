@@ -1,10 +1,11 @@
+package test;
+
 public class testMaintenance {
     private Maintenance m;
 
     @BeforeEach
     public void setUp() {
-        // TODO
-
+        m = new Maintenance();
     }
 
     @Test
@@ -25,6 +26,11 @@ public class testMaintenance {
         // TODO
     }
 
+    /* Inspection test */
 
-
+    @Test
+    @DisplayName("Testing pass/fail inspection")
+    public void testPassFailInspection() {
+       // TODO
+    }
 }
