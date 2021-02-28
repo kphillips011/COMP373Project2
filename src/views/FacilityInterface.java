@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
+import models.*;
 
 public interface FacilityInterface  {
     public String getFacilityInformation(); // returns details for a facility
@@ -10,6 +11,6 @@ public interface FacilityInterface  {
     public float calcProblemRateForFacility();
     public int calcDownTimeForFacility();
     public ArrayList<Maintenance> listFacilityProblems();
-    public boolean makeFacilityMaintRequest(String details, double cost, Date date, LocalTime dur, Room room);
+    public boolean makeFacilityMaintRequest(String details, double cost, Date date, double dur, Room room);
     public ArrayList<MaintenanceRequest> listMaintRequests();
 }
