@@ -42,7 +42,6 @@ public class Use implements UseInterface {
         return (float)rate;
     }
 
-    /*
     // I think this should list all Use objects where inUse == False
     public ArrayList<Use> listActualUsage() {
         ArrayList<Use> uses = new ArrayList<Use>();
@@ -53,7 +52,6 @@ public class Use implements UseInterface {
         }
         return uses;
     }
-    */
 
     public String getDetails() { return this.details; }
     public Date getDate() { return this.date; }
