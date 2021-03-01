@@ -36,7 +36,7 @@ public class testMaintenance {
     @Test
     @DisplayName("Testing getMaintenanceCost")
     public void testGetMaintenanceCost() {
-        assertEquals(100.00, m.getMaintenanceCost());
+        assertEquals(300.00, m.getMaintenanceCost());
     }
 
     @Test
