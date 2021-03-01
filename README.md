@@ -7,14 +7,16 @@ UML Diagram of Domain Model: https://drive.google.com/file/d/1Zm1sBM2HghQoju3NC0
 
 Overview
 In this project, we will start providing an object domain model for Facility Management System by addressing the design and implementation using OOP. The aim is to have a domain model that is designed using OOP that will be used to study Object relationship and Dependency.
-Key Objectives
+
+Key Objectives 
+
 Based on the specification provided for a Facility Management System:
--Identify the main entities of the problem domain. 
--Identify their attributes. 
--Identify their relationships.
--Identify their roles and responsibilities.
--Discover other objects that facilitate implementing responsibilities. 
--Make available all client interfaces/services specified in the specification document (Facility, Facility Use, and Facility Maintenance Client Interfaces).
+* Identify the main entities of the problem domain. 
+* Identify their attributes. 
+* Identify their relationships.
+* Identify their roles and responsibilities.
+* Discover other objects that facilitate implementing responsibilities. 
+* Make available all client interfaces/services specified in the specification document (Facility, Facility Use, and Facility Maintenance Client Interfaces).
 
 Program Requirements:
 -Facility and its description: This will cover the functionalities such as adding a new facility to be managed; removing a facility from being managed; getting general information such as the number and capacity of facilities and their current statuses. 
