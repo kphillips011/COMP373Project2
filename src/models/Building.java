@@ -14,4 +14,6 @@ public class Building {
         this.address = address;
         this.rooms = new ArrayList<Room>();
     }
+
+    public void addRoom(Room r) { this.rooms.add(r); }
 }

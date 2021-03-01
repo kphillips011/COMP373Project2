@@ -1,6 +1,5 @@
 package models;
 
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -122,4 +121,7 @@ public class Facility implements FacilityInterface {
         return this.requestedMaintenance;
     }
 
+    public void addBuilding(Building b) { this.buildings.add(b); }
+
+    public void addUse(Use u) { this.actualUsage.add(u); }
 }

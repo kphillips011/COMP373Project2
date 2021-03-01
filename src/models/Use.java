@@ -21,17 +21,14 @@ public class Use implements UseInterface {
         this.room = room;
     }
 
-    @Override
     public boolean isInUseDuringInterval() { return inUse; } //returns if facility is in use
 
-    @Override
     public boolean assignFacilityToUse(Facility facility)
     {
     inUse = true;
     return inUse;
     }
 
-    @Override
     public float calcUsageRate() {
         // calculates the proportion of when a facility is in use to when it is open
         // assumes a facility is open 8 hours a day (9-5)
