@@ -1,7 +1,5 @@
 package views;
 
-import java.util.ArrayList;
-
 import models.Facility;
 
 public interface UseInterface {
