@@ -125,4 +125,6 @@ public class Facility implements FacilityInterface {
     public void addUse(Use u) { this.actualUsage.add(u); }
 
     public String getDetails() { return this.details; }
+
+    public String getName() { return this.facilityName }
 }
