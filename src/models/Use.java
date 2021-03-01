@@ -25,6 +25,7 @@ public class Use implements UseInterface {
     public boolean isInUseDuringInterval() { return inUse; } //returns if facility is in use
 
     public boolean assignFacilityToUse(Facility facility) {
+        this.facility = facility;
         inUse = true;
         return inUse;
     }
@@ -55,10 +56,8 @@ public class Use implements UseInterface {
     */
 
     public String getDetails() { return this.details; }
-
+    public Date getDate() { return this.date; }
     public double getDuration() { return this.duration; }
-
     public Room getRoom() { return this.room; }
 
-    public Date getDate() { return this.date; }
 }
