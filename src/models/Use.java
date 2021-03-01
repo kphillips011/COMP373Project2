@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import views.UseInterface;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Use implements UseInterface {
     Facility facility;
