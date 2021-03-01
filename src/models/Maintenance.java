@@ -8,7 +8,7 @@ public class Maintenance implements MaintenanceInterface {
     Facility facility;
     String details;
     double cost;
-    double duration; //will be measured in units of hours
+    double duration; // will be measured in units of hours
     Room room;
     Date date;
     boolean completed;
@@ -32,6 +32,8 @@ public class Maintenance implements MaintenanceInterface {
 
     @Override
     public double getMaintenanceCost() { return this.cost; }
+
+    public void setCompleted() { this.completed = true; };
 
     @Override
     public boolean isCompleted() { return this.completed; }
