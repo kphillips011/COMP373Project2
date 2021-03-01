@@ -14,7 +14,6 @@ public class Use implements UseInterface {
     boolean inUse = false;
 
     public Use(String details, Date date, double duration, Room room, Facility facility) {
-        //super(date, duration, room, facility);
         inUse = true;
         this.details = details;
         this.facility = facility; 
@@ -41,11 +40,12 @@ public class Use implements UseInterface {
         double rate = totalDuration/(8.0*uses.size());
         return (float)rate;
     }
+
     // I think this should list all Use objects where inUse == False
     public ArrayList<Use> listActualUsage() {
         ArrayList<Use> uses = new ArrayList<Use>();
         for (Facility f : this.facilities) {
-            for (Use mr : f.uses ) {
+            for (Use mr : f.uses) {
                 if (!(mr.inUse())) { uses.add(mr); }
             }
         }
