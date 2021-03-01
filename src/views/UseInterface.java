@@ -1,6 +1,7 @@
 package views;
 
 import models.Facility;
+import models.Room;
 
 import java.util.Date;
 
