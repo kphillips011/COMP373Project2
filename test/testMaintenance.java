@@ -42,6 +42,7 @@ public class testMaintenance {
     @Test
     @DisplayName("Testing testIsCompleted")
     public void testIsCompleted() {
+        assertEquals(false,m.isCompleted());
         m.setCompleted();
         assertEquals(true, m.isCompleted());
     }
