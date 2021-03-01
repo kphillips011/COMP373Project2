@@ -16,4 +16,10 @@ public class Building {
     }
 
     public void addRoom(Room r) { this.rooms.add(r); }
+
+    public String getName() { return this.buildingName; }
+
+    public String getAddress() { return this.address; }
+
+    public ArrayList<Room> getRooms() { return this.rooms; }
 }

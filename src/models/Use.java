@@ -52,4 +52,11 @@ public class Use implements UseInterface {
         return uses;
     }
 
+    public String getDetails() { return this.details; }
+
+    public double getDuration() { return this.duration; }
+
+    public Room getRoom() { return this.room; }
+
+    public Date getDate() { return this.date; }
 }

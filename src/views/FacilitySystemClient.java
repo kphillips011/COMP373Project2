@@ -8,8 +8,6 @@ import models.*;
 
 public class FacilitySystemClient {
     public static void main(String[] args) throws IOException {
-        // TODO
-        // connect Facility, Use, Maintenance classes to client
         DataReader dr = new DataReader();
         HashMap<String,Object> input;
         try{ 
@@ -23,16 +21,39 @@ public class FacilitySystemClient {
             Map.Entry element = (Map.Entry)i.next();
             String key = element.getKey().toString();
             Object val = element.getValue();
+            Facility f;
+            Building b;
+            Room r;
+            MaintenanceRequest mr;
+            Use u;
             switch(key){
                 case "Facility":
+                    f = (Facility)val;
+                    System.out.println("Facility " + f.getName());
+                    System.out.println("Facility details: " + f.getDetails());
+                    System.out.println("Maintenance requests: " + f.listMaintRequests().size());
+                    System.out.println("Capacity: " + f.requestAvailableCapacity());
                     break;
                 case "Building":
+                    b = (Building)val;
+                    System.out.println("Building "+ b.getName());
+                    System.out.println(b.getAddress());
+                    System.out.println("Rooms: " + b.getRooms().size());
                     break;
                 case "Room":
+                    r = (Room)val;
+                    System.out.println("Room " + r.getRoomNumber());
                     break;
                 case "MaintenanceRequest":
+                    mr = (MaintenanceRequest)val;
+                    System.out.println(mr.toString());
                     break;
                 case "Use":
+                    u = (Use)val;
+                    System.out.println("Use " + u.getDetails());
+                    System.out.println("Date " + u.getDate());
+                    System.out.println("Duration: " + u.getDuration());
+                    System.out.println("Room: " + u.getRoom().getRoomNumber());
                     break;
             }
         }

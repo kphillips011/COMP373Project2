@@ -14,4 +14,6 @@ public class Room {
 		this.inUse = false;
 		this.inMaintenance = false;
 	}
+
+	public int getRoomNumber() { return this.roomNumber; }
 }
