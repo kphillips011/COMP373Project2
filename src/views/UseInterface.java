@@ -2,6 +2,8 @@ package views;
 
 import java.util.ArrayList;
 
+import models.Facility;
+
 public interface UseInterface {
     public boolean isInUseDuringInterval(); // to check if a room/facility is in use
     public boolean assignFacilityToUse(Facility facility); // Assigning a facility to whether or not it is in use

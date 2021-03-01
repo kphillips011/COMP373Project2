@@ -3,6 +3,8 @@ package models;
 import java.util.ArrayList;
 import java.util.Date;
 
+import views.UseInterface;
+
 public class Use implements UseInterface {
     Facility facility;
     String details;

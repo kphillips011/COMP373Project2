@@ -17,7 +17,7 @@ public class testFacility {
     private Building building;
     private Room room;
 
-    @BeforeEach
+    @BeforeAll
     public void setUp() throws Exception{
         facility = new Facility(1, "LUC", "Chicago's Jesuit University");
         building = new Building(1, "Mundelein", "1032 W.Sheridan Rd, Chicago, IL, 60626");
