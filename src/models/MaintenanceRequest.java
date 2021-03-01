@@ -14,6 +14,8 @@ public class MaintenanceRequest extends Maintenance {
         return this;
     }
 
+    public boolean isAccepted() { return this.accepted; }
+
     @Override
     public String toString() {
         if (accepted == false) {
@@ -29,8 +31,4 @@ public class MaintenanceRequest extends Maintenance {
     public double getDuration() { return this.duration; }
 
     public Room getRoom() { return this.room; }
-
-    public boolean isAccepted() {
-        return this.accepted;
-    }
 }
