@@ -32,10 +32,9 @@ Functional:
 * Distribute Classes/Modules to appropriate layers
 * Use Interfaces, Abstract Classes, Modules
 * Create Unit testing
-* Provide documents to list out your assumptions.
 
 Other Specifications:
-* UML Diagram through Draw.io
-* Will be created through Java
-* GitHub version control
+* Create UML Diagram using Draw.io
+* Java project language
+* Use GitHub version control system
 
