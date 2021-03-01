@@ -43,8 +43,13 @@ public class Use implements UseInterface {
     }
     // I think this should list all Use objects where inUse == False
     public ArrayList<Use> listActualUsage() {
-        // TODO
-        return null;
+        ArrayList<Use> uses = new ArrayList<Use>();
+        for (Facility f : this.facilities) {
+            for (Use mr : f.uses ) {
+                if (!(mr.inUse())) { uses.add(mr); }
+            }
+        }
+        return uses;
     }
 
 }
