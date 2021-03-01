@@ -2,6 +2,8 @@ package models;
 
 import java.util.Date;
 
+import views.MaintenanceInterface;
+
 public class Maintenance implements MaintenanceInterface {
     Facility facility;
     String details;

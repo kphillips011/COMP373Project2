@@ -2,8 +2,9 @@ package views;
 
 import java.util.HashMap;
 
+import dataAccess.DataReader;
 import models.*;
-import dataaccess.DataReader;
+import dataAccess.DataReader;
 
 public class FacilitySystemClient {
     public static void main(String[] args) {
