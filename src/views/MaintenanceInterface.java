@@ -1,15 +1,14 @@
+package views;
+
 import java.util.ArrayList;
 
+import models.Maintenance;
+
 public interface MaintenanceInterface {
-    public boolean makeFacilityMaintRequest(); // in MaintenanceRequest, gather details of a maintenance request and set
-                                                    // 'accepted' to false. Changed to boolean instead of returning Maintenance obj
-    public Maintenance scheduleMaintenance(); // create a new Maintenance object in MaintenanceRequest where accepted == true and
-                                                // completed == false
-    public int calcMaintenanceCostForFacility(); // based upon the whole facility - calculate total cost from all maintenance objects
-    public float calcProblemRateForFacility(); // based upon the whole facility - calculate ratio of not completed maintenance objects to
-                                                // completed maintenance objects
-    public int calcDownTimeForFacility(); // based upon the whole facility - calculate total duration from all maintenance objects?
-    public ArrayList<MaintenanceRequest> listMaintRequests(); // list all Maintenance Requests for ALL facilities by Facility ID
     public Maintenance listMaintenance(); // list specific maintenance object
-    public ArrayList<Maintenance> listFacilityProblems(); // I think this should list all Maintenance objects where completed == False
+    public double getMaintenanceCost(); // returns cost associated with maintenance object
+    public boolean isCompleted(); // returns whether the maintenance is completed
+    public String toString();
+
+
 }

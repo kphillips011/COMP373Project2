@@ -1,10 +1,18 @@
+package views;
+
 import java.util.ArrayList;
+import java.util.Date;
+import models.*;
 
 public interface FacilityInterface  {
-    public ArrayList<Facility> listFacilities();
-    public String getFacilityInformation();
-    public int requestAvailableCapacity();
-    public void addNewFacility();
-    public void addFacilityDetail();
-    public Facility removeFacility();
-    public Facility vacateFacility();}
+    public String getFacilityInformation(); // returns details for a facility
+    public int requestAvailableCapacity(); // returns available capacity for a facility
+    public void addFacilityDetails(String details);
+    public boolean vacateFacility();
+    public double calcMaintenanceCostForFacility();
+    public float calcProblemRateForFacility();
+    public int calcDownTimeForFacility();
+    public ArrayList<Maintenance> listFacilityProblems();
+    public boolean makeFacilityMaintRequest(String details, double cost, Date date, double dur, Room room);
+    public ArrayList<MaintenanceRequest> listMaintRequests();
+}
