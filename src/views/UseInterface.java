@@ -12,5 +12,5 @@ public interface UseInterface {
     public String getDetails();// gets details about the use
     public double getDuration();//gets the duration of usage
     public Room getRoom(); //gets the room in use.
-    public Date getDate(); //gets the date of usage
+    public Date getDate(); //gets the date of usage for the facility
 }

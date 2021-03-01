@@ -54,6 +54,7 @@ public class Use implements UseInterface {
         return uses;
     }
 
+//Helper Methods
     public String getDetails() { return this.details; }
     public Date getDate() { return this.date; }
     public double getDuration() { return this.duration; }
