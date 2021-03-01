@@ -37,7 +37,7 @@ public class testUse {
                 "Faucet Maintenance", new Date(), 100.00, new Room(new Building(2,
                 "building 2", "address 2"), 2, 202),
                 new Facility(1, "facility 1", "address 1"));
-        assertEquals(8.0, .calcUsageRate());
+        assertEquals(8.0, facility.calcUsageRate());
     }
 
 }
