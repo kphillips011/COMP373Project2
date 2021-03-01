@@ -42,7 +42,6 @@ public class testMaintenance {
     @Test
     @DisplayName("Testing testIsCompleted")
     public void testIsCompleted() {
-        // TODO
         m.setCompleted();
         assertEquals(true, m.isCompleted());
     }
@@ -52,6 +51,9 @@ public class testMaintenance {
     @Test
     @DisplayName("Testing pass/fail inspection")
     public void testPassFailInspection() {
-       // TODO
+       i.failInspection();
+       assertEquals(false, i.passed());
+       i.passInspection();
+       assertEquals(true, i.passed());
     }
 }
