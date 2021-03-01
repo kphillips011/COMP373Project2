@@ -1,7 +1,5 @@
 package views;
 
-import java.util.ArrayList;
-
 import models.Maintenance;
 
 public interface MaintenanceInterface {
