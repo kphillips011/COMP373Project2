@@ -5,7 +5,33 @@ Contributors: Kendall Phillips, Gaudwin Timoteo, Trey Roche
 
 UML Diagram of Domain Model: https://drive.google.com/file/d/1Zm1sBM2HghQoju3NC0F6oRXxVnQqejAE/view?usp=sharing
 
-Requirements Document: https://docs.google.com/document/d/1CVLKygFR-x2wQOTJfc8qTQF2-vffRT8EfpQfFZ5bKiA/edit?usp=sharing
+Overview
+In this project, we will start providing an object domain model for Facility Management System by addressing the design and implementation using OOP. The aim is to have a domain model that is designed using OOP that will be used to study Object relationship and Dependency.
+Key Objectives
+Based on the specification provided for a Facility Management System:
+Identify the main entities of the problem domain. 
+Identify their attributes. 
+Identify their relationships.
+Identify their roles and responsibilities.
+Discover other objects that facilitate implementing responsibilities. 
+Make available all client interfaces/services specified in the specification document (Facility, Facility Use, and Facility Maintenance Client Interfaces).
 
-Notes:
-1. Assume that someone must make a MaintenanceRequest object in order for a Maintenance object to be created.
+Program Requirements
+Facility and its description: This will cover the functionalities such as adding a new facility to be managed; removing a facility from being managed; getting general information such as the number and capacity of facilities and their current statuses. 
+Facility Use: this covers the functionalities of managing the facility such as reserving a facility; the cost of using and maintaining it; assigning and de-assigning a facility for use.
+Facility Maintenance: this functionality covers the maintenance of a facility such as scheduling a facility for maintenance; checking maintenance status; listing maintenance requests; calculating down time of a facility and many more functionalities. Client Interfaces: 
+
+Minimum Requirements:
+Functional
+Create a clear UML Diagram
+Implement interface endpoints in the Project Case Statement
+Distribute Classes/Modules to appropriate layers
+Use Interfaces, Abstract Classes, Modules
+Create Unit testing
+Provide documents to list out your assumptions.
+Other
+Product
+UML Diagram through Draw.io
+Will be created through Java
+GitHub version control
+
