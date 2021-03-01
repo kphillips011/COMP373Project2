@@ -43,17 +43,6 @@ public class Use implements UseInterface {
         return (float)rate;
     }
 
-    // I think this should list all Use objects where inUse == False
-    public ArrayList<Use> listActualUsage() {
-        ArrayList<Use> uses = new ArrayList<Use>();
-        for (Facility f : this.facilities) {
-            for (Use mr : f.uses) {
-                if (!(mr.inUse())) { uses.add(mr); }
-            }
-        }
-        return uses;
-    }
-
 //Helper Methods for Use
     public String getDetails() { return this.details; }
     public Date getDate() { return this.date; }
