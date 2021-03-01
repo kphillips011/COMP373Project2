@@ -5,7 +5,8 @@ Contributors: Kendall Phillips, Gaudwin Timoteo, Trey Roche
 
 UML Diagram of Domain Model: https://drive.google.com/file/d/1Zm1sBM2HghQoju3NC0F6oRXxVnQqejAE/view?usp=sharing
 
-Overview
+**Overview**
+
 In this project, we will start providing an object domain model for Facility Management System by addressing the design and implementation using OOP. The aim is to have a domain model that is designed using OOP that will be used to study Object relationship and Dependency.
 
 Key Objectives, based on the specification provided for a Facility Management System:
