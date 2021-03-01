@@ -59,7 +59,7 @@ public class DataReader {
                         datestr = params[2].split("-");
                         date = new Date(Integer.valueOf(datestr[2]), Integer.valueOf(datestr[1]), Integer.valueOf(datestr[0]));
                         mr = new MaintenanceRequest(facility, params[0], Integer.valueOf(params[1]), date, Integer.valueOf(params[3]), room);
-                        facility.makeFacilityMaintRequest(mr.getDetails(), mr.getMaintenanceCost(), mr.getDate(), mr.getDuration(), mr.getRoom());
+                        facility.makeFacilityMaintRequest(mr);
                         output.put("MaintenanceRequest", mr);
                         if(csvRead.readLine().split(",")[0].equals("")){
                             break;
