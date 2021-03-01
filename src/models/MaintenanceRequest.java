@@ -14,6 +14,8 @@ public class MaintenanceRequest extends Maintenance {
         return this;
     }
 
+    public boolean isAccepted() { return this.accepted; }
+
     @Override
     public String toString() {
         if (accepted == false) {
