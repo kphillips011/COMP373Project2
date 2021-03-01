@@ -16,9 +16,10 @@ public class testUse {
 
     @BeforeEach
     public void setUp() {
-        usage = new Use(new Facility(1, "facility 1", "address 1"),
+        usage = new Use(
                 "Faucet Maintenance", new Date(), 100.00, new Room(new Building(2,
-                "building 2", "address 2"), 2, 202));
+                "building 2", "address 2"), 2, 202),
+                new Facility(1, "facility 1", "address 1"));
     }
 
     @Test
