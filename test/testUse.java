@@ -2,7 +2,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Date;
+
+import models.Building;
+import models.Facility;
+import models.Room;
 import models.Use;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class testUse {
     private Use usage;
