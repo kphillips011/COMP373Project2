@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import models.Building;
 import models.Facility;
+import models.MaintenanceRequest;
 import models.Room;
 
 public class testFacility {
@@ -48,33 +49,33 @@ public class testFacility {
     @DisplayName("Testing vacateFacility")
     public void testVacateFacility() {
         assertTrue(facility.vacateFacility());
-        assertEquals(0, facility.listFacilityProblems().size())
+        assertEquals(0, facility.listFacilityProblems().size());
     }
 
     @Test
     @DisplayName("Testing calcMaintenanceCostForFacility")
     public void testCalcMaintenanceCostForFacility(){
-        facility.makeFacilityMaintRequest("Leaky facuet", 35, new Date(2021, 01, 01), 1.5, room);
+        facility.makeFacilityMaintRequest(new MaintenanceRequest(facility, "Leaky facuet", 35.00, new Date(2021, 01, 01), 1.5, room));
         assertEquals(35.0, facility.calcMaintenanceCostForFacility());
     }
 
     @Test
     @DisplayName("Testing calcProblemRateForFacility")
     public void testCalcProblemRateForFacility(){
-        facility.makeFacilityMaintRequest("Leaky facuet", 35, new Date(2021, 01, 01), 1.5, room);
+        facility.makeFacilityMaintRequest(new MaintenanceRequest(facility, "Leaky facuet", 35, new Date(2021, 01, 01), 1.5, room));
         assertEquals(1.0, facility.calcProblemRateForFacility());
     }
 
     @Test
     @DisplayName("Testing listFacilityProblems")
     public void testListFacilityProblems(){
-        assertEquals(2, facility.listFacilityProblems().size())
+        assertEquals(2, facility.listFacilityProblems().size());
     }
 
     @Test
     @DisplayName("Testing makeFacilityMaintRequest")
     public void testMakeFacilityMaintRequest(){
-        assertTrue(facility.makeFacilityMaintRequest("Leaky facuet", 35, new Date(2021, 01, 01), 1.5, room));
+        assertTrue(facility.makeFacilityMaintRequest(new MaintenanceRequest(facility, "Leaky facuet", 35, new Date(2021, 01, 01), 1.5, room)));
     }
 
     @Test
