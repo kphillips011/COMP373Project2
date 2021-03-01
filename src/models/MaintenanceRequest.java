@@ -21,4 +21,12 @@ public class MaintenanceRequest extends Maintenance {
                     ", Details = " + details + ", Room = " + room;
         } else { return "Request Information = \n" + "Accepted = true, " + super.toString() ; }
     }
+
+    public String getDetails() { return this.details; }
+
+    public Date getDate() { return this.date; }
+
+    public double getDuration() { return this.duration; }
+
+    public Room getRoom() { return this.room; }
 }
