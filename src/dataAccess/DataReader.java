@@ -8,7 +8,7 @@ import models.*;
 
 public class DataReader {
 
-    public HashMap<String,Object> read(String[] args) throws IOException {
+    public HashMap<String,Object> read() throws IOException {
         HashMap<String,Object> output = new HashMap<String,Object>();
         FacilityManager fm = new FacilityManager();
         BufferedReader csvRead;
