@@ -29,4 +29,8 @@ public class MaintenanceRequest extends Maintenance {
     public double getDuration() { return this.duration; }
 
     public Room getRoom() { return this.room; }
+
+    public boolean isAccepted() {
+        return this.accepted;
+    }
 }
