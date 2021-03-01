@@ -25,6 +25,7 @@ public class Use implements UseInterface {
 
     public boolean isInUseDuringInterval() { return inUse; } //returns if facility is in use
 
+    // Assigning a facility to whether or not it is in use
     public boolean assignFacilityToUse(Facility facility) {
         this.facility = facility;
         inUse = true;
