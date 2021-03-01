@@ -33,7 +33,6 @@ Functional:
 - Distribute Classes/Modules to appropriate layers
 - Use Interfaces, Abstract Classes, Modules
 - Create Unit testing
-- Provide documents to list out your assumptions.
 
 Other specifications:
 - UML Diagram created with Draw.io
