@@ -24,7 +24,7 @@ Based on the specification provided for a Facility Management System:
 * Facility Use: this covers the functionalities of managing the facility such as reserving a facility, the cost of using and maintaining the facility, and assigning and de-assigning a facility for use.
 * Facility Maintenance: this functionality covers the maintenance of a facility such as scheduling a facility for maintenance, checking maintenance status of a facility, listing maintenance requests for the facility, calculating down time of a facility and many more functionalities. 
 
-**Minimum Requirements: **
+**Minimum Requirements:**
 
 Functional:
 * Create a clear UML Diagram
