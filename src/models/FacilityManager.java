@@ -5,6 +5,9 @@ import java.util.ArrayList;
 public class FacilityManager {
     ArrayList<Facility> facilities;
 
+    public FacilityManager(){
+        this.facilities = new ArrayList<Facility>();
+    }
     // note: changed from getFacilities() to listFacilities()
     public ArrayList<Facility> listFacilities(){
         return this.facilities;

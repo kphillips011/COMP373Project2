@@ -121,4 +121,9 @@ public class Facility implements FacilityInterface {
         return this.requestedMaintenance;
     }
 
+    public void addBuilding(Building b) { this.buildings.add(b); }
+
+    public void addUse(Use u) { this.actualUsage.add(u); }
+
+    public String getDetails() { return this.details; }
 }
