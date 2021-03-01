@@ -54,10 +54,8 @@ public class Use implements UseInterface {
     }
 
     public String getDetails() { return this.details; }
-
+    public Date getDate() { return this.date; }
     public double getDuration() { return this.duration; }
-
     public Room getRoom() { return this.room; }
 
-    public Date getDate() { return this.date; }
 }

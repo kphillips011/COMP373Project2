@@ -10,7 +10,7 @@ public class testUse {
 
     @Test
     @DisplayName("Testing assignFacilityToUse")
-    public void assignFacilityToUse(){
+    public void testAssignFacilityToUse(){
         assertEquals(false, usage.isInUseDuringInterval());
         usage.assignFacilityToUse();
         assertEquals(true, usage.isInUseDuringInterval());
@@ -18,7 +18,7 @@ public class testUse {
 
     @Test
     @DisplayName("Testing calcUsageRate")
-    public void calcUsageRate(){
+    public void testCalcUsageRate(){
         facility.Use (new Facility(1, "facility 1", "address 1"), "Faucet Maintenance", new Date(),
                 100.00, new Room(new Building(2, "building 2", "address 2"), 2, 202));
         assertEquals(8.0, facility.calcMaintenanceCostForFacility());
