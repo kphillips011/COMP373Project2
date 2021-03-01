@@ -2,6 +2,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Date;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
@@ -16,7 +17,7 @@ public class testFacilityManager {
     private Building b;
     private Facility f;
     private MaintenanceRequest mr; 
-    private Inspection
+    private Maintenance.Inspection i;
 
     @BeforeAll
     public void setUp() throws Exception{
@@ -24,7 +25,7 @@ public class testFacilityManager {
         f = new Facility(1, "LUC WTC", "Water Tower Campus");
         b = new Building(1, "Schreiber", "51 E. Pearson St, Chicago, IL 60622");
         r = new Room(b, 20, 603);
-        mr = new MaintenanceRequest("Pipe burst", 25.00, new Date(20201, 01, 01), 1.0, r)
+        mr = new MaintenanceRequest("Pipe burst", 25.00, new Date(20201, 01, 01), 1.0, r);
         i = mr.new Inspection();
     }
 
@@ -52,7 +53,7 @@ public class testFacilityManager {
     @DisplayName("Testing listInspections")
     public void testListInspections(){
         fm.listFacilities().get(0).makeFacilityMaintRequest(mr);
-        assertEquals(1, fm.listActualUsage().size())
+        assertEquals(1, fm.listActualUsage().size());
     }
 
     @Test
