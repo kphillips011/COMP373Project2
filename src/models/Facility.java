@@ -126,5 +126,5 @@ public class Facility implements FacilityInterface {
 
     public String getDetails() { return this.details; }
 
-    public String getName() { return this.facilityName }
+    public String getName() { return this.facilityName; }
 }
