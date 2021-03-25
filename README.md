@@ -1,4 +1,4 @@
-# COMP373Project1
+# COMP373Project2
 Repository for COMP 373 Project 2.
 
 Contributors: Kendall Phillips, Gaudwin Timoteo, Trey Roche
