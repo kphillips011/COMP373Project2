@@ -7,4 +7,76 @@
 
     <description>Wiring the dependencies for the Facility Management Application.</description>
 
+    <bean id="room" class="models.Room" scope="prototype"></bean>
+    <bean id="maintenanceRequest" class="models.MaintenanceRequest" scope="prototype"></bean>
+
+    <bean id="facilityManager" class="models.FacilityManager" scope="prototype">
+        <property name="facilities">
+            <list/>
+            <!--
+        	<list>
+            	<ref bean="facility" />
+            </list>
+             -->
+        </property>
+    </bean>
+
+    <bean id="facility" class="models.Facility" scope="prototype">
+        <property name="buildings">
+            <list/>
+            <!--
+        	<list>
+            	<ref bean="building" />
+            </list>
+             -->
+        </property>
+        <property name="requestedMaintenance">
+            <list/>
+            <!--
+        	<list>
+            	<ref bean="maintenanceRequest" />
+            </list>
+             -->
+        </property>
+        <property name="actualUsage">
+            <list/>
+            <!--
+        	<list>
+            	<ref bean="use" />
+            </list>
+             -->
+        </property>
+        <property name="inspections">
+            <list/>
+            <!--
+        	<list>
+            	<ref bean="inspection" />
+            </list>
+             -->
+        </property>
+    </bean>
+
+    <bean id="building" class="models.Building" scope="prototype">
+        <property name="rooms">
+            <list/>
+            <!--
+        	<list>
+            	<ref bean="room" />
+            </list>
+             -->
+        </property>
+    </bean>
+
+    <bean id="maintenance" class="models.Maintenance" scope="prototype">
+        <property name="facility" ref="facility"/>
+        <property name="room" ref="room"/>
+    </bean>
+
+    <bean id="use" class="models.Use" scope="prototype">
+        <property name="facility" ref="facility"/>
+        <property name="room" ref="room"/>
+    </bean>
+
+
+
 </beans>
