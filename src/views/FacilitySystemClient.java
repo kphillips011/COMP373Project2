@@ -10,6 +10,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class FacilitySystemClient {
     public static void main(String[] args) throws IOException {
+        ApplicationContext context = new ClassPathXmlApplicationContext("../app-context.xml");
+        System.out.println("App Context Instantiated.")
         DataReader dr = new DataReader();
         HashMap<String,Object> input;
         try{ 
