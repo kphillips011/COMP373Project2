@@ -77,6 +77,4 @@
         <property name="room" ref="room"/>
     </bean>
 
-
-
 </beans>

@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class FacilitySystemClient {
     public static void main(String[] args) throws IOException {
         ApplicationContext context = new ClassPathXmlApplicationContext("../app-context.xml");
-        System.out.println("App Context Instantiated.")
+        System.out.println("App Context Instantiated.");
         DataReader dr = new DataReader();
         HashMap<String,Object> input;
         try{ 
@@ -25,11 +25,11 @@ public class FacilitySystemClient {
             Map.Entry element = (Map.Entry)i.next();
             String key = element.getKey().toString();
             Object val = element.getValue();
-            Facility f;
-            Building b;
-            Room r;
-            MaintenanceRequest mr;
-            Use u;
+            Facility f = (Facility) context.getBean("facility");
+            Building b = (Building) context.getBean("building");
+            Room r = (Room) context.getBean("room");
+            MaintenanceRequest mr = (MaintenanceRequest) context.getBean("maintenanceRequest");
+            Use u = (Use) context.getBean("use");
             switch(key){
                 case "Facility":
                     f = (Facility)val;
